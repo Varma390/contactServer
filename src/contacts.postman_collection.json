@@ -1,0 +1,195 @@
+{
+	"info": {
+		"_postman_id": "36d8fc25-e1a8-47c4-91b5-1d235d85af6b",
+		"name": "contacts",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "search",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0MDE5ODQsImRhdGEiOiI2M2FlYzVkNjc3MjdhYjZmZmEyMTJhZmQiLCJpYXQiOjE2NzIzOTgzODR9.-xvWDSSmXhLals5T_Jymib51pekcMm_JL1FTbOs-e5w",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/:email",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						":email"
+					],
+					"variable": [
+						{
+							"key": "email",
+							"value": "varma@mail.com"
+						}
+					]
+				},
+				"description": "search"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\r\n      {\r\n    \"Email\": \"ravi1@gmail.com\",\r\n    \"Password\": \"fafsfgrgergr\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "      {\r\n    \"Email\": \"ravi1@gmail.com\",\r\n    \"Password\": \"fafsfgrgergr\",\r\n    \"confirmPassword\": \"fafsfgrgergr\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/signup",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "add contacts",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0MDE5ODQsImRhdGEiOiI2M2FlYzVkNjc3MjdhYjZmZmEyMTJhZmQiLCJpYXQiOjE2NzIzOTgzODR9.-xvWDSSmXhLals5T_Jymib51pekcMm_JL1FTbOs-e5w",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "      [{\r\n                \"Name\": \"ravi\",\r\n                \"Designation\": \"ravi\",\r\n                \"Company\": \"ravi\",\r\n                \"Industry\": \"ravi\",\r\n                \"Email\": \"ravi@mail.com\",\r\n                \"Phone_number\":523452345456,\r\n                \"Country\": \"ravi\"\r\n            },\r\n            {\r\n                \"Name\": \"teja\",\r\n                \"Designation\": \"ravi\",\r\n                \"Company\": \"ravi\",\r\n                \"Industry\": \"ravi\",\r\n                \"Email\": \"teja@mail.com\",\r\n                \"Phone_number\": 342534255,\r\n                \"Country\": \"ravi\"\r\n            },{\r\n                \"Name\": \"varma\",\r\n                \"Designation\": \"ravi\",\r\n                \"Company\": \"ravi\",\r\n                \"Industry\": \"ravi\",\r\n                \"Email\": \"varma@mail.com\",\r\n                \"Phone_number\": 5346546754765,\r\n                \"Country\": \"ravi\"\r\n            }\r\n            ]\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/add",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"add"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "show all contacts ",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0MDE5ODQsImRhdGEiOiI2M2FlYzVkNjc3MjdhYjZmZmEyMTJhZmQiLCJpYXQiOjE2NzIzOTgzODR9.-xvWDSSmXhLals5T_Jymib51pekcMm_JL1FTbOs-e5w",
+						"type": "default"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:3000/user/contacts",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"contacts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete contacts ",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2NzI0MDE5ODQsImRhdGEiOiI2M2FlYzVkNjc3MjdhYjZmZmEyMTJhZmQiLCJpYXQiOjE2NzIzOTgzODR9.-xvWDSSmXhLals5T_Jymib51pekcMm_JL1FTbOs-e5w",
+						"type": "default"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "[\r\n    \"63aec7a899d5a636046d819d\",\r\n    \"63aec7a899d5a636046d819e\"\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/user/delete",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"user",
+						"delete"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
+
